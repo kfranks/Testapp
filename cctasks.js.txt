@@ -58,7 +58,7 @@ function calltask(taskdesc) {
         "onSuccess": function (data) {
             $(options.status).show();
             $(options.status).removeClass('label label-success label-warning label-important').addClass('label label-success');
-            $(options.status).html(JSON.stringify(data.tombstone[0],undefined,2));
+            $(options.status).html(JSON.stringify(data.tombstone,undefined,2));
             $(options.spinner).hide();
             //simpleCart.empty();
         },
