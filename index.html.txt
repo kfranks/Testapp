@@ -29,8 +29,8 @@ Task Results
             };
     $('#task').click(function(){
         calltask(taskdesc);
-        $('#history').append($('#status').html());
-        calltask(taskdesc1);
+        //$('#history').append($('#status').html());
+        //calltask(taskdesc1);
     
     });
 
