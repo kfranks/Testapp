@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <i><b><title>Katy's Test Application</title></b></i>
+    <script type="text/javascript" src="http://static.cybercommons.org/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="cctasks.js"></script>
+</head>
+<body>
+<input id="task" type="button" value="Submit" class="button1" background-color: #4ECDC4; display: inline-block;/>
+Task Result
+<b><div id="status" style="height:850px"></div></b>
+Task Results
+<div id="history" style="height:100px"></div>
+<script>
+
+        var taskdesc = {
+               "taskname":   'cybercomq.model.teco.task.add',
+               "params":     ['Katy ','Franks'],   // Fixed params
+                "status":     '#status',
+                "spinner":    '#spinner',
+                "pollinterval": 2000
+            };
+            var taskdesc1 = {
+               "taskname":   'cybercomq.model.teco.task.add',
+               "params":     ['I am ','learning Javascript'],   // Fixed params
+                "status":     '#status',
+                "spinner":    '#spinner',
+                "pollinterval": 2000
+            };
+    $('#task').click(function(){
+        calltask(taskdesc);
+        $('#history').append($('#status').html());
+        calltask(taskdesc1);
+    
+    });
+
+</script>
+</body>
+</html>
